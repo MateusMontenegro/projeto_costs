@@ -1,0 +1,31 @@
+const Condicional = () => {
+    
+    const[email, setEmail] = useState()
+    const[userEmail, setUserEmail] = useState ()
+
+    function enviarEmail(e){
+        e.preventDefault()
+        setUserEmail(email)
+        console.log(userEmail)
+    }
+    function limparEmail(e){
+        e.preventDefault()
+        setUserEmail()
+    }
+    return ( 
+        <div>
+            <h2>Cadastre seu email</h2>
+        
+        <form >
+            <input type="emai" onChange={(e)=> setEmail(e.target.value)} placeholder="Cadastre seu email"/>
+            <button type='submit' onClick={enviarEmail}>Cadastre seu email</button>            
+            {userEmail && ( 
+                <div>
+                    <p>o email do usuario é: {userEmail}</p>
+                    <button onClick={limparEmail}> Limpar Email</button>
+                </div>
+            )}
+        </form>
+        </div>
+     );
+}

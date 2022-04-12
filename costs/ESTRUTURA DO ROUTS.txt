@@ -1,0 +1,14 @@
+</Router>podemos chamr de roteador
+</Routes> rotas 
+</Route> rota
+
+
+<Router>
+ <Routes>
+	<Route>
+	
+	</Route>
+ </Routes>
+</Router>
+
+essa é a estrutura do ROUTER
