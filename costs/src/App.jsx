@@ -3,29 +3,28 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Home from './components/pages/Home';
 import Contato from './components/pages/Contato';
 import Company from './components/pages/Company';
-import NewProject from './components/pages/NewProject';
+import Projects from './components/pages/Projects';
+import NewProject from './components/pages/Newproject';
 
 
 import Container from './components/layouts/Container';
+import Navbar from './components/layouts/Navbar'
+import Footer from './components/layouts/Footer'
 
 function App() {
   return (
       <Router>
-        <div>
-          <Link to='/'> Home</Link>
-          <Link to='/Contato'> Contact</Link>
-          <Link to='/Company'> Company</Link>
-          <Link to='/NewProject'> NewProject</Link>
-        </div>
+        <Navbar/>
           <Container customClass="min-height"> {/* Container fora dos Routes */ }
           <Routes>
               <Route exact path="/" element={<Home/>}/> {/* Para a pagina inicial colocamos apenas / com  o "exact"*/}
               <Route path="Company" element={<Company/>}/>
               <Route path="Contato" element={<Contato/>}/>
-              <Route path='NewProject' element={ <NewProject />}/>
+              <Route path='Projects' element={<Projects/>}/>
+              <Route path='newproject' element={<NewProject/>}/>
           </Routes>
           </Container>
-          <p>Footer</p>
+          <Footer/>
          
       </Router>
   )

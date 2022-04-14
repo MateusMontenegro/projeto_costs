@@ -1,5 +1,7 @@
-function NewProject(){
-    return <h1>Newproject</h1>;
+const NewProject = () => {
+    return ( 
+        <h1> NewProject</h1>
+     );
 }
-
+ 
 export default NewProject;
